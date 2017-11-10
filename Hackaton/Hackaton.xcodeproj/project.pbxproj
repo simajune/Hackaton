@@ -14,6 +14,11 @@
 		231816571FB585F500E69EB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231816561FB585F500E69EB3 /* Assets.xcassets */; };
 		2318165A1FB585F500E69EB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231816581FB585F500E69EB3 /* LaunchScreen.storyboard */; };
 		231816631FB595E000E69EB3 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231816621FB595E000E69EB3 /* SplashViewController.swift */; };
+		231816661FB599F100E69EB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231816651FB599F100E69EB3 /* MainViewController.swift */; };
+		231816691FB59A0C00E69EB3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231816681FB59A0C00E69EB3 /* SettingsViewController.swift */; };
+		2318166B1FB59A1700E69EB3 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2318166A1FB59A1700E69EB3 /* Settings.storyboard */; };
+		2318166D1FB59A2A00E69EB3 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2318166C1FB59A2A00E69EB3 /* Splash.storyboard */; };
+		2318166F1FB59AF200E69EB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2318166E1FB59AF200E69EB3 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		231816591FB585F500E69EB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2318165B1FB585F500E69EB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		231816621FB595E000E69EB3 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		231816651FB599F100E69EB3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		231816681FB59A0C00E69EB3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2318166A1FB59A1700E69EB3 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		2318166C1FB59A2A00E69EB3 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		2318166E1FB59AF200E69EB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F942D2CA8DE741B29DE62EB /* Pods-Hackaton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton.release.xcconfig"; sourceTree = "<group>"; };
 		5180F5CB1414F88BC4DAF0E6 /* Pods-Hackaton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton.debug.xcconfig"; sourceTree = "<group>"; };
 		BA63A2608D4019999D812D1B /* Pods_Hackaton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackaton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,12 +73,14 @@
 		2318164E1FB585F500E69EB3 /* Hackaton */ = {
 			isa = PBXGroup;
 			children = (
+				231816671FB599FF00E69EB3 /* Settings */,
+				231816641FB5987300E69EB3 /* Main */,
 				231816611FB595A300E69EB3 /* Splash */,
 				2318164F1FB585F500E69EB3 /* AppDelegate.swift */,
-				231816531FB585F500E69EB3 /* Main.storyboard */,
 				231816561FB585F500E69EB3 /* Assets.xcassets */,
 				231816581FB585F500E69EB3 /* LaunchScreen.storyboard */,
 				2318165B1FB585F500E69EB3 /* Info.plist */,
+				2318166E1FB59AF200E69EB3 /* GoogleService-Info.plist */,
 			);
 			path = Hackaton;
 			sourceTree = "<group>";
@@ -78,8 +90,27 @@
 			children = (
 				231816511FB585F500E69EB3 /* ViewController.swift */,
 				231816621FB595E000E69EB3 /* SplashViewController.swift */,
+				2318166C1FB59A2A00E69EB3 /* Splash.storyboard */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		231816641FB5987300E69EB3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				231816651FB599F100E69EB3 /* MainViewController.swift */,
+				231816531FB585F500E69EB3 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		231816671FB599FF00E69EB3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				231816681FB59A0C00E69EB3 /* SettingsViewController.swift */,
+				2318166A1FB59A1700E69EB3 /* Settings.storyboard */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		5F3D514DBDE68E8D94DB24A8 /* Frameworks */ = {
@@ -164,6 +195,9 @@
 				2318165A1FB585F500E69EB3 /* LaunchScreen.storyboard in Resources */,
 				231816571FB585F500E69EB3 /* Assets.xcassets in Resources */,
 				231816551FB585F500E69EB3 /* Main.storyboard in Resources */,
+				2318166D1FB59A2A00E69EB3 /* Splash.storyboard in Resources */,
+				2318166B1FB59A1700E69EB3 /* Settings.storyboard in Resources */,
+				2318166F1FB59AF200E69EB3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +269,8 @@
 				231816631FB595E000E69EB3 /* SplashViewController.swift in Sources */,
 				231816521FB585F500E69EB3 /* ViewController.swift in Sources */,
 				231816501FB585F500E69EB3 /* AppDelegate.swift in Sources */,
+				231816691FB59A0C00E69EB3 /* SettingsViewController.swift in Sources */,
+				231816661FB599F100E69EB3 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
