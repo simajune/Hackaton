@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		200941EFD3CBD19DB620E35A /* Pods_Hackaton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA63A2608D4019999D812D1B /* Pods_Hackaton.framework */; };
 		231816501FB585F500E69EB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318164F1FB585F500E69EB3 /* AppDelegate.swift */; };
-		231816521FB585F500E69EB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231816511FB585F500E69EB3 /* ViewController.swift */; };
 		231816551FB585F500E69EB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231816531FB585F500E69EB3 /* Main.storyboard */; };
 		231816571FB585F500E69EB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231816561FB585F500E69EB3 /* Assets.xcassets */; };
 		2318165A1FB585F500E69EB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231816581FB585F500E69EB3 /* LaunchScreen.storyboard */; };
@@ -19,12 +18,13 @@
 		2318166B1FB59A1700E69EB3 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2318166A1FB59A1700E69EB3 /* Settings.storyboard */; };
 		2318166D1FB59A2A00E69EB3 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2318166C1FB59A2A00E69EB3 /* Splash.storyboard */; };
 		2318166F1FB59AF200E69EB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2318166E1FB59AF200E69EB3 /* GoogleService-Info.plist */; };
+		231816721FB59C7C00E69EB3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231816711FB59C7C00E69EB3 /* Login.storyboard */; };
+		231816741FB59C8500E69EB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231816731FB59C8500E69EB3 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2318164C1FB585F500E69EB3 /* Hackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2318164F1FB585F500E69EB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		231816511FB585F500E69EB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		231816541FB585F500E69EB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		231816561FB585F500E69EB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		231816591FB585F500E69EB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +35,8 @@
 		2318166A1FB59A1700E69EB3 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		2318166C1FB59A2A00E69EB3 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		2318166E1FB59AF200E69EB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		231816711FB59C7C00E69EB3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		231816731FB59C8500E69EB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F942D2CA8DE741B29DE62EB /* Pods-Hackaton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton.release.xcconfig"; sourceTree = "<group>"; };
 		5180F5CB1414F88BC4DAF0E6 /* Pods-Hackaton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton.debug.xcconfig"; sourceTree = "<group>"; };
 		BA63A2608D4019999D812D1B /* Pods_Hackaton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackaton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 		2318164E1FB585F500E69EB3 /* Hackaton */ = {
 			isa = PBXGroup;
 			children = (
+				231816701FB59C6A00E69EB3 /* Login */,
 				231816671FB599FF00E69EB3 /* Settings */,
 				231816641FB5987300E69EB3 /* Main */,
 				231816611FB595A300E69EB3 /* Splash */,
@@ -88,7 +91,6 @@
 		231816611FB595A300E69EB3 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				231816511FB585F500E69EB3 /* ViewController.swift */,
 				231816621FB595E000E69EB3 /* SplashViewController.swift */,
 				2318166C1FB59A2A00E69EB3 /* Splash.storyboard */,
 			);
@@ -111,6 +113,15 @@
 				2318166A1FB59A1700E69EB3 /* Settings.storyboard */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		231816701FB59C6A00E69EB3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				231816711FB59C7C00E69EB3 /* Login.storyboard */,
+				231816731FB59C8500E69EB3 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		5F3D514DBDE68E8D94DB24A8 /* Frameworks */ = {
@@ -194,6 +205,7 @@
 			files = (
 				2318165A1FB585F500E69EB3 /* LaunchScreen.storyboard in Resources */,
 				231816571FB585F500E69EB3 /* Assets.xcassets in Resources */,
+				231816721FB59C7C00E69EB3 /* Login.storyboard in Resources */,
 				231816551FB585F500E69EB3 /* Main.storyboard in Resources */,
 				2318166D1FB59A2A00E69EB3 /* Splash.storyboard in Resources */,
 				2318166B1FB59A1700E69EB3 /* Settings.storyboard in Resources */,
@@ -226,14 +238,18 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTimer/SwiftTimer.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTimer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,8 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231816741FB59C8500E69EB3 /* LoginViewController.swift in Sources */,
 				231816631FB595E000E69EB3 /* SplashViewController.swift in Sources */,
-				231816521FB585F500E69EB3 /* ViewController.swift in Sources */,
 				231816501FB585F500E69EB3 /* AppDelegate.swift in Sources */,
 				231816691FB59A0C00E69EB3 /* SettingsViewController.swift in Sources */,
 				231816661FB599F100E69EB3 /* MainViewController.swift in Sources */,

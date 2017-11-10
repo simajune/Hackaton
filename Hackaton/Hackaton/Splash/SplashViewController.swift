@@ -1,19 +1,28 @@
-//
-//  SplashViewController.swift
-//  Hackaton
-//
-//  Created by SIMA on 2017. 11. 10..
-//  Copyright © 2017년 FC. All rights reserved.
-//
 
 import UIKit
+//import Firebase
+
 
 class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("splash")
+        
 
-        // Do any additional setup after loading the view.
+//        if let _ = Auth.auth().currentUser {
+//
+//        }else {
+//
+//        }
     }
 
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let LoginSB = UIStoryboard(name: "Login", bundle: nil)
+        if let LoginVC = LoginSB.instantiateViewController(withIdentifier: "Login") as? LoginViewController {
+            self.present(LoginVC, animated: true, completion: nil)
+        }
+    }
 }
