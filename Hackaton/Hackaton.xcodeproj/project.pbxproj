@@ -9,34 +9,44 @@
 /* Begin PBXBuildFile section */
 		200941EFD3CBD19DB620E35A /* Pods_Hackaton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA63A2608D4019999D812D1B /* Pods_Hackaton.framework */; };
 		231816501FB585F500E69EB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318164F1FB585F500E69EB3 /* AppDelegate.swift */; };
-		231816551FB585F500E69EB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231816531FB585F500E69EB3 /* Main.storyboard */; };
 		231816571FB585F500E69EB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231816561FB585F500E69EB3 /* Assets.xcassets */; };
 		2318165A1FB585F500E69EB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231816581FB585F500E69EB3 /* LaunchScreen.storyboard */; };
 		231816631FB595E000E69EB3 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231816621FB595E000E69EB3 /* SplashViewController.swift */; };
-		231816661FB599F100E69EB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231816651FB599F100E69EB3 /* MainViewController.swift */; };
-		231816691FB59A0C00E69EB3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231816681FB59A0C00E69EB3 /* SettingsViewController.swift */; };
-		2318166B1FB59A1700E69EB3 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2318166A1FB59A1700E69EB3 /* Settings.storyboard */; };
 		2318166D1FB59A2A00E69EB3 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2318166C1FB59A2A00E69EB3 /* Splash.storyboard */; };
 		2318166F1FB59AF200E69EB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2318166E1FB59AF200E69EB3 /* GoogleService-Info.plist */; };
 		231816721FB59C7C00E69EB3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231816711FB59C7C00E69EB3 /* Login.storyboard */; };
 		231816741FB59C8500E69EB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231816731FB59C8500E69EB3 /* LoginViewController.swift */; };
+		231816761FB5B19D00E69EB3 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231816751FB5B19D00E69EB3 /* SignupViewController.swift */; };
+		237E08DF1FB5D01F004551B3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E08DE1FB5D01F004551B3 /* CustomButton.swift */; };
+		237E08ED1FB6057D004551B3 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E08EA1FB6057D004551B3 /* SettingTableViewController.swift */; };
+		237E08EE1FB6057D004551B3 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237E08EC1FB6057D004551B3 /* Settings.storyboard */; };
+		237E08F21FB60890004551B3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E08F11FB60890004551B3 /* DetailViewController.swift */; };
+		237E08F41FB608A6004551B3 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237E08F31FB608A6004551B3 /* Detail.storyboard */; };
+		237E08FD1FB64416004551B3 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E08F71FB64416004551B3 /* RoundButton.swift */; };
+		237E08FE1FB64416004551B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E08F91FB64416004551B3 /* MainViewController.swift */; };
+		237E08FF1FB64416004551B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237E08FB1FB64416004551B3 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2318164C1FB585F500E69EB3 /* Hackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2318164F1FB585F500E69EB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		231816541FB585F500E69EB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		231816561FB585F500E69EB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		231816591FB585F500E69EB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2318165B1FB585F500E69EB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		231816621FB595E000E69EB3 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		231816651FB599F100E69EB3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		231816681FB59A0C00E69EB3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		2318166A1FB59A1700E69EB3 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		2318166C1FB59A2A00E69EB3 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		2318166E1FB59AF200E69EB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		231816711FB59C7C00E69EB3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		231816731FB59C8500E69EB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		231816751FB5B19D00E69EB3 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		237E08DE1FB5D01F004551B3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		237E08EA1FB6057D004551B3 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		237E08EC1FB6057D004551B3 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		237E08F11FB60890004551B3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		237E08F31FB608A6004551B3 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		237E08F71FB64416004551B3 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		237E08F91FB64416004551B3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		237E08FC1FB64416004551B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F942D2CA8DE741B29DE62EB /* Pods-Hackaton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton.release.xcconfig"; sourceTree = "<group>"; };
 		5180F5CB1414F88BC4DAF0E6 /* Pods-Hackaton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton.debug.xcconfig"; sourceTree = "<group>"; };
 		BA63A2608D4019999D812D1B /* Pods_Hackaton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackaton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,10 +85,11 @@
 		2318164E1FB585F500E69EB3 /* Hackaton */ = {
 			isa = PBXGroup;
 			children = (
-				231816701FB59C6A00E69EB3 /* Login */,
-				231816671FB599FF00E69EB3 /* Settings */,
-				231816641FB5987300E69EB3 /* Main */,
 				231816611FB595A300E69EB3 /* Splash */,
+				237E08F51FB64416004551B3 /* Main */,
+				237E08F01FB6086A004551B3 /* Main2 */,
+				237E08E81FB6057D004551B3 /* Settings */,
+				231816701FB59C6A00E69EB3 /* Login */,
 				2318164F1FB585F500E69EB3 /* AppDelegate.swift */,
 				231816561FB585F500E69EB3 /* Assets.xcassets */,
 				231816581FB585F500E69EB3 /* LaunchScreen.storyboard */,
@@ -97,31 +108,99 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
-		231816641FB5987300E69EB3 /* Main */ = {
+		231816701FB59C6A00E69EB3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				231816651FB599F100E69EB3 /* MainViewController.swift */,
-				231816531FB585F500E69EB3 /* Main.storyboard */,
+				237E08E01FB5D024004551B3 /* View Controller */,
+				237E08E11FB5D037004551B3 /* View */,
+				231816711FB59C7C00E69EB3 /* Login.storyboard */,
 			);
-			path = Main;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		231816671FB599FF00E69EB3 /* Settings */ = {
+		237E08E01FB5D024004551B3 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				231816681FB59A0C00E69EB3 /* SettingsViewController.swift */,
-				2318166A1FB59A1700E69EB3 /* Settings.storyboard */,
+				231816731FB59C8500E69EB3 /* LoginViewController.swift */,
+				231816751FB5B19D00E69EB3 /* SignupViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		237E08E11FB5D037004551B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				237E08DE1FB5D01F004551B3 /* CustomButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		237E08E81FB6057D004551B3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				237E08E91FB6057D004551B3 /* VC */,
+				237E08EB1FB6057D004551B3 /* View */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		231816701FB59C6A00E69EB3 /* Login */ = {
+		237E08E91FB6057D004551B3 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				231816711FB59C7C00E69EB3 /* Login.storyboard */,
-				231816731FB59C8500E69EB3 /* LoginViewController.swift */,
+				237E08EA1FB6057D004551B3 /* SettingTableViewController.swift */,
 			);
-			path = Login;
+			path = VC;
+			sourceTree = "<group>";
+		};
+		237E08EB1FB6057D004551B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				237E08EC1FB6057D004551B3 /* Settings.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		237E08F01FB6086A004551B3 /* Main2 */ = {
+			isa = PBXGroup;
+			children = (
+				237E08F11FB60890004551B3 /* DetailViewController.swift */,
+				237E08F31FB608A6004551B3 /* Detail.storyboard */,
+			);
+			path = Main2;
+			sourceTree = "<group>";
+		};
+		237E08F51FB64416004551B3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				237E08F61FB64416004551B3 /* Layout */,
+				237E08F81FB64416004551B3 /* VC */,
+				237E08FA1FB64416004551B3 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		237E08F61FB64416004551B3 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				237E08F71FB64416004551B3 /* RoundButton.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		237E08F81FB64416004551B3 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				237E08F91FB64416004551B3 /* MainViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		237E08FA1FB64416004551B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				237E08FB1FB64416004551B3 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5F3D514DBDE68E8D94DB24A8 /* Frameworks */ = {
@@ -206,10 +285,11 @@
 				2318165A1FB585F500E69EB3 /* LaunchScreen.storyboard in Resources */,
 				231816571FB585F500E69EB3 /* Assets.xcassets in Resources */,
 				231816721FB59C7C00E69EB3 /* Login.storyboard in Resources */,
-				231816551FB585F500E69EB3 /* Main.storyboard in Resources */,
+				237E08FF1FB64416004551B3 /* Main.storyboard in Resources */,
+				237E08F41FB608A6004551B3 /* Detail.storyboard in Resources */,
 				2318166D1FB59A2A00E69EB3 /* Splash.storyboard in Resources */,
-				2318166B1FB59A1700E69EB3 /* Settings.storyboard in Resources */,
 				2318166F1FB59AF200E69EB3 /* GoogleService-Info.plist in Resources */,
+				237E08EE1FB6057D004551B3 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,17 +318,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Hackaton/Pods-Hackaton-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CountdownLabel/CountdownLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftTimer/SwiftTimer.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountdownLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTimer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -282,31 +364,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237E08FD1FB64416004551B3 /* RoundButton.swift in Sources */,
+				237E08F21FB60890004551B3 /* DetailViewController.swift in Sources */,
+				237E08ED1FB6057D004551B3 /* SettingTableViewController.swift in Sources */,
+				231816761FB5B19D00E69EB3 /* SignupViewController.swift in Sources */,
 				231816741FB59C8500E69EB3 /* LoginViewController.swift in Sources */,
 				231816631FB595E000E69EB3 /* SplashViewController.swift in Sources */,
+				237E08FE1FB64416004551B3 /* MainViewController.swift in Sources */,
 				231816501FB585F500E69EB3 /* AppDelegate.swift in Sources */,
-				231816691FB59A0C00E69EB3 /* SettingsViewController.swift in Sources */,
-				231816661FB599F100E69EB3 /* MainViewController.swift in Sources */,
+				237E08DF1FB5D01F004551B3 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		231816531FB585F500E69EB3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				231816541FB585F500E69EB3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		231816581FB585F500E69EB3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				231816591FB585F500E69EB3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		237E08FB1FB64416004551B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				237E08FC1FB64416004551B3 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -425,12 +511,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
 				INFOPLIST_FILE = Hackaton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FC.Hackaton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -440,12 +527,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
 				INFOPLIST_FILE = Hackaton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FC.Hackaton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
