@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmas tree" translatesAutoresizingMaskIntoConstraints="NO" id="yNh-qz-tfG" userLabel="MainImage">
-                                <rect key="frame" x="62.5" y="132" width="250" height="249.5"/>
+                                <rect key="frame" x="62.5" y="132.5" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yNh-qz-tfG" secondAttribute="height" multiplier="1:1" id="w83-f0-x6K"/>
                                 </constraints>
@@ -45,7 +45,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Z2e-bd-00Z" userLabel="Button Stack View">
-                                <rect key="frame" x="38.5" y="419.5" width="298" height="32"/>
+                                <rect key="frame" x="38.5" y="421" width="298" height="32"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqW-I3-zyy" customClass="RoundButton" customModule="Hackaton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="52" height="32"/>
@@ -97,7 +97,7 @@
                                             <constraint firstAttribute="width" constant="52" id="ip3-Cs-hTO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="120분 ">
+                                        <state key="normal" title="120분">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>

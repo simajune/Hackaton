@@ -12,30 +12,39 @@ class MainViewController: UIViewController {
     @IBOutlet weak var cashLB: UILabel!
     
     // MARK: 프로퍼티
-    var temp = 0
+    var seconds  = 0
     var tag = 0
     var cash = 0
-    var TotalTime = 0
+    var totalTime = 0
+    let userCash = "cash"
+    let userTotalTime = "TotalTime"
+    let timeOnTheFirstButton = 30
+    let timeOnTheSecondButton = 60
+    let timeOnTheThirdButton = 90
+    let timeOnTheFourthButton = 120
+    var userButtonTag: Int?
     
     // 버튼 액션
     @IBAction func buttonAction(_ sender: UIButton) {
-        switch sender.tag {
-        case 1:
-            temp = minutesToSeconds(1)
-            self.tag = sender.tag
-        case 2:
-            temp = minutesToSeconds(60)
-            self.tag = sender.tag
-        case 3:
-            temp = minutesToSeconds(90)
-            self.tag = sender.tag
-        case 4:
-            temp = minutesToSeconds(120)
-            self.tag = sender.tag
-        case 5:
-            countdownLabelFrame(TimeInterval(temp))
-        default:
-            break
+        guard let buttonTag = ButtonTag(rawValue: sender.tag) else { return }
+        switch buttonTag {
+        case .firstButton:
+            seconds = minutesToSeconds(minutes: 1)
+            userButtonTag = 1
+        case .secondButton:
+            seconds = minutesToSeconds(minutes: timeOnTheSecondButton)
+            userButtonTag = 2
+        case .thirdButton:
+            seconds = minutesToSeconds(minutes: timeOnTheThirdButton)
+            userButtonTag = 3
+        case .fourthButton:
+            seconds = minutesToSeconds(minutes: timeOnTheFourthButton)
+            userButtonTag = 4
+        case .startButton:
+            if startBtn.isHidden == false{
+                countdownLabelFrame(TimeInterval(seconds))
+                startBtn.isHidden = true
+            }
         }
     }
 
@@ -46,16 +55,16 @@ class MainViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        cash = UserDefaults.standard.integer(forKey: "cash")
-        cashLB.text = String(cash)
-        TotalTime = UserDefaults.standard.integer(forKey: "totalTime")
+        UserDefaults.standard.integer(forKey: userCash)
+        UserDefaults.standard.integer(forKey: userTotalTime)
+        cashLB.text = "\(cash)"
     }
     
     // MARK: 메소드
     // 분을 초로 계산하는 메소드
-    func minutesToSeconds(_ minutes: Int) -> Int
+    func minutesToSeconds(minutes minuteValue: Int) -> Int
     {
-       return minutes * 60
+       return minuteValue * 60
     }
     
     // CountdownLabel 프레임
@@ -89,34 +98,46 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: CountdownLabelDelegate {
+    // MARK: countdownFinished()
+    // 타이머가 끝나고 난 후
     func countdownFinished()
     {
-        if tag == 1 {
-            cash  += 100
-            cashLB.text = String(cash)
-            UserDefaults.standard.set(cash, forKey: "cash")
-            TotalTime  += 30
-            UserDefaults.standard.set(TotalTime, forKey: "totalTime")
-        }else if tag == 2 {
-            cash  += 300
-            cashLB.text = String(cash)
-            UserDefaults.standard.set(cash, forKey: "cash")
-            TotalTime  += 60
-            UserDefaults.standard.set(TotalTime, forKey: "totalTime")
-        }else if tag == 3 {
-            cash  += 700
-            cashLB.text = String(cash)
-            UserDefaults.standard.set(cash, forKey: "cash")
-            TotalTime  += 90
-            UserDefaults.standard.set(TotalTime, forKey: "totalTime")
-        }else {
-            cash  += 1000
-            cashLB.text = String(cash)
-            UserDefaults.standard.set(cash, forKey: "cash")
-            TotalTime  += 120
-            UserDefaults.standard.set(TotalTime, forKey: "totalTime")
+        guard let tag = userButtonTag else { return }
+        switch tag  {
+        case 1:
+            cash += 100
+            totalTime += timeOnTheFirstButton
+        case 2:
+            cash += 300
+            totalTime += timeOnTheSecondButton
+        case 3:
+            cash += 700
+            totalTime += timeOnTheThirdButton
+        case 4:
+            cash += 1000
+            totalTime += timeOnTheFourthButton
+        default:
+            break
         }
         
+        cashLB.text = "\(cash)"
+        UserDefaults.standard.set(cash, forKey: userCash)
+        UserDefaults.standard.set(totalTime, forKey: userTotalTime)
         
+        let alert = UIAlertController(title: "CASH", message: "\(cash)", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: false, completion: nil)
+        startBtn.isHidden = false // 메소드가 끝나면 버튼 보이기
     }
+}
+
+// MARK: ENUM
+enum ButtonTag: Int
+{
+    case firstButton = 1
+    case secondButton = 2
+    case thirdButton = 3
+    case fourthButton = 4
+    case startButton = 0
 }

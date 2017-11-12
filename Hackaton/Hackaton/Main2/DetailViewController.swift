@@ -6,7 +6,8 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    //MARK: - Property
     @IBOutlet weak var cashLb: UILabel!
     @IBOutlet weak var totalTime: UILabel!
     @IBOutlet weak var sunHeight: NSLayoutConstraint!
@@ -28,12 +29,13 @@ class DetailViewController: UIViewController {
     var totalMinutes: Int = 0
     var totalCash: Int = 0
     
+    //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         initialTreeView()
         
     }
-    
+    //MARK: - 나무 알파 값 초기화
     func initialTreeView() {
         self.sunTree.alpha = 0
         self.monTree.alpha = 0
@@ -44,6 +46,7 @@ class DetailViewController: UIViewController {
         self.satTree.alpha = 0
     }
     
+    //MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -55,9 +58,9 @@ class DetailViewController: UIViewController {
         
         totalTime.text = "금주 총 집중한 시간 : " + String(totalMinutes) + "분"
         cashLb.text = String(totalCash)
-        
     }
     
+    //MARK: - ViewDidAppear
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -74,9 +77,9 @@ class DetailViewController: UIViewController {
             self.satHeight = self.satHeight.changeMultiplier(changeMultiplier: 0.3)
             self.view.layoutIfNeeded()
         }
-        
     }
     
+    //MARK: - Method
     @IBAction func homeButtonAction(_ sender: UIButton) {
         let mainSB = UIStoryboard(name: "Main", bundle: nil)
         if let mainVC = mainSB.instantiateViewController(withIdentifier: "Main") as? UINavigationController {
@@ -90,9 +93,9 @@ class DetailViewController: UIViewController {
             self.present(settingsVC, animated: true, completion: nil)
         }
     }
-    
 }
 
+//MARK: - Extension
 extension NSLayoutConstraint {
     func changeMultiplier(changeMultiplier: CGFloat) -> NSLayoutConstraint {
         NSLayoutConstraint.deactivate([self])

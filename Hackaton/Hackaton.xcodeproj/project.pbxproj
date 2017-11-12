@@ -17,6 +17,7 @@
 		231816721FB59C7C00E69EB3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231816711FB59C7C00E69EB3 /* Login.storyboard */; };
 		231816741FB59C8500E69EB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231816731FB59C8500E69EB3 /* LoginViewController.swift */; };
 		231816761FB5B19D00E69EB3 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231816751FB5B19D00E69EB3 /* SignupViewController.swift */; };
+		2321CE8A1FB8706A009BAE3D /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321CE891FB8706A009BAE3D /* DataCenter.swift */; };
 		237E08DF1FB5D01F004551B3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E08DE1FB5D01F004551B3 /* CustomButton.swift */; };
 		237E08ED1FB6057D004551B3 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E08EA1FB6057D004551B3 /* SettingTableViewController.swift */; };
 		237E08EE1FB6057D004551B3 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237E08EC1FB6057D004551B3 /* Settings.storyboard */; };
@@ -39,6 +40,7 @@
 		231816711FB59C7C00E69EB3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		231816731FB59C8500E69EB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		231816751FB5B19D00E69EB3 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		2321CE891FB8706A009BAE3D /* DataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
 		237E08DE1FB5D01F004551B3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		237E08EA1FB6057D004551B3 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		237E08EC1FB6057D004551B3 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				237E08F51FB64416004551B3 /* Main */,
 				237E08F01FB6086A004551B3 /* Main2 */,
 				237E08E81FB6057D004551B3 /* Settings */,
+				2321CE881FB87049009BAE3D /* Data */,
 				231816701FB59C6A00E69EB3 /* Login */,
 				2318164F1FB585F500E69EB3 /* AppDelegate.swift */,
 				231816561FB585F500E69EB3 /* Assets.xcassets */,
@@ -116,6 +119,14 @@
 				231816711FB59C7C00E69EB3 /* Login.storyboard */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		2321CE881FB87049009BAE3D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2321CE891FB8706A009BAE3D /* DataCenter.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		237E08E01FB5D024004551B3 /* View Controller */ = {
@@ -366,6 +377,7 @@
 			files = (
 				237E08FD1FB64416004551B3 /* RoundButton.swift in Sources */,
 				237E08F21FB60890004551B3 /* DetailViewController.swift in Sources */,
+				2321CE8A1FB8706A009BAE3D /* DataCenter.swift in Sources */,
 				237E08ED1FB6057D004551B3 /* SettingTableViewController.swift in Sources */,
 				231816761FB5B19D00E69EB3 /* SignupViewController.swift in Sources */,
 				231816741FB59C8500E69EB3 /* LoginViewController.swift in Sources */,
