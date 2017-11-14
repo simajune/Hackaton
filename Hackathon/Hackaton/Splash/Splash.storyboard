@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fao-6U-p7Z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="iFF-PS-oT7">
+            <objects>
+                <viewController id="fao-6U-p7Z" customClass="SplashViewController" customModule="Hackaton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uMR-Ut-G04">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ggH-60-Y5C">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="1" green="0.99607843137254903" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="christmas-cap" translatesAutoresizingMaskIntoConstraints="NO" id="pUl-DB-xDf">
+                                <rect key="frame" x="150.5" y="300.5" width="75" height="66.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pUl-DB-xDf" firstAttribute="centerX" secondItem="uMR-Ut-G04" secondAttribute="centerX" id="01g-Qc-eU9"/>
+                            <constraint firstItem="ggH-60-Y5C" firstAttribute="top" secondItem="GTI-mt-4t9" secondAttribute="top" id="E0K-oj-Vhk"/>
+                            <constraint firstItem="GTI-mt-4t9" firstAttribute="bottom" secondItem="ggH-60-Y5C" secondAttribute="bottom" id="NNA-87-Bl0"/>
+                            <constraint firstItem="GTI-mt-4t9" firstAttribute="trailing" secondItem="ggH-60-Y5C" secondAttribute="trailing" id="RNL-NZ-6ir"/>
+                            <constraint firstItem="pUl-DB-xDf" firstAttribute="height" secondItem="uMR-Ut-G04" secondAttribute="height" multiplier="0.1" id="YBd-Cc-22S"/>
+                            <constraint firstItem="pUl-DB-xDf" firstAttribute="width" secondItem="uMR-Ut-G04" secondAttribute="width" multiplier="0.2" id="fcx-8u-gdw"/>
+                            <constraint firstItem="pUl-DB-xDf" firstAttribute="centerY" secondItem="uMR-Ut-G04" secondAttribute="centerY" id="hdd-19-Xch"/>
+                            <constraint firstItem="ggH-60-Y5C" firstAttribute="leading" secondItem="GTI-mt-4t9" secondAttribute="leading" id="vVi-0q-hio"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GTI-mt-4t9"/>
+                    </view>
+                    <connections>
+                        <outlet property="BG" destination="ggH-60-Y5C" id="53f-s6-x41"/>
+                        <outlet property="logoImage" destination="pUl-DB-xDf" id="ubL-ie-naT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T7d-8T-TEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-478" y="-353"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="eKm-fq-l7n">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Main" storyboardName="Main" id="cke-lc-OvI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQ7-2d-Ryq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203" y="-323"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="gNb-a0-UpW">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Login" storyboardName="Login" id="aWe-Qa-N4H" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8m-iz-dgq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-487" y="157"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="christmas-cap" width="162" height="195"/>
+    </resources>
+</document>
