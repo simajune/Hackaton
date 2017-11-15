@@ -116,16 +116,26 @@
                                     <action selector="buttonAction:" destination="6tF-5r-Xl6" eventType="touchUpInside" id="RtJ-98-GS0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g80-gt-wg9" customClass="CountdownLabel" customModule="CountdownLabel">
+                                <rect key="frame" x="38.5" y="501" width="298" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.80784313725490198" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="g80-gt-wg9" firstAttribute="width" secondItem="Z2e-bd-00Z" secondAttribute="width" id="0cL-q2-qfl"/>
                             <constraint firstItem="N2b-2B-SzG" firstAttribute="top" secondItem="bnB-u1-tc7" secondAttribute="top" id="46q-R3-Rix"/>
+                            <constraint firstItem="g80-gt-wg9" firstAttribute="centerY" secondItem="s3Y-gE-T2h" secondAttribute="centerY" multiplier="1.55:1" id="AU6-JL-JDy"/>
                             <constraint firstItem="yNh-qz-tfG" firstAttribute="width" secondItem="s3Y-gE-T2h" secondAttribute="width" multiplier="1:1.5" id="F4p-7k-CWU"/>
                             <constraint firstItem="Z2e-bd-00Z" firstAttribute="centerX" secondItem="s3Y-gE-T2h" secondAttribute="centerX" id="LNE-Bb-Aeo"/>
+                            <constraint firstItem="g80-gt-wg9" firstAttribute="centerX" secondItem="s3Y-gE-T2h" secondAttribute="centerX" id="Lzr-7z-dSW"/>
                             <constraint firstItem="N2b-2B-SzG" firstAttribute="height" secondItem="bnB-u1-tc7" secondAttribute="height" placeholder="YES" id="Mgb-LM-NJP"/>
                             <constraint firstItem="yNh-qz-tfG" firstAttribute="centerX" secondItem="s3Y-gE-T2h" secondAttribute="centerX" id="NVe-wu-eUS"/>
                             <constraint firstItem="5pL-d2-y0c" firstAttribute="centerY" secondItem="s3Y-gE-T2h" secondAttribute="centerY" multiplier="1.8:1" id="RN8-Me-TYC"/>
                             <constraint firstItem="N2b-2B-SzG" firstAttribute="leading" secondItem="bnB-u1-tc7" secondAttribute="trailing" id="Rsk-qu-KtI"/>
+                            <constraint firstItem="g80-gt-wg9" firstAttribute="height" secondItem="5pL-d2-y0c" secondAttribute="height" id="UHG-vo-jpC"/>
                             <constraint firstItem="5pL-d2-y0c" firstAttribute="width" secondItem="yNh-qz-tfG" secondAttribute="width" multiplier="1:1.5" id="XIV-ka-yvP"/>
                             <constraint firstItem="Z2e-bd-00Z" firstAttribute="centerY" secondItem="yNh-qz-tfG" secondAttribute="centerY" multiplier="1.7:1" id="XNK-Xk-8tw"/>
                             <constraint firstItem="1aG-BU-shh" firstAttribute="trailing" secondItem="N2b-2B-SzG" secondAttribute="trailing" id="bwD-uX-IrE"/>
@@ -163,6 +173,7 @@
                     <connections>
                         <outlet property="btnStackView" destination="Z2e-bd-00Z" id="aEp-8w-Uka"/>
                         <outlet property="cashLB" destination="N2b-2B-SzG" id="n7B-38-wfa"/>
+                        <outlet property="countDownLB" destination="g80-gt-wg9" id="Fi3-A7-uaX"/>
                         <outlet property="startBtn" destination="5pL-d2-y0c" id="AZX-lt-cyh"/>
                         <segue destination="W4q-ME-3np" kind="show" identifier="DetailSegue" id="VO2-jU-BZK"/>
                         <segue destination="mbS-SD-8sS" kind="show" identifier="SettingsSegue" id="cJM-EA-hoH"/>

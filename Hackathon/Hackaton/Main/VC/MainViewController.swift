@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var startBtn: UIButton!
     
     @IBOutlet weak var cashLB: UILabel!
+    @IBOutlet weak var countDownLB: CountdownLabel!
     
     // MARK: 프로퍼티
     
@@ -48,7 +49,7 @@ class MainViewController: UIViewController {
             userButtonTag = 4
         case .startButton:
             if startBtn.isHidden == false{
-                countdownLabelFrame(TimeInterval(seconds))
+                timerRunning(TimeInterval(seconds))
                 startBtn.isHidden = true
             }
         }
@@ -87,17 +88,12 @@ class MainViewController: UIViewController {
        return minuteValue
     }
     
-    // CountdownLabel 프레임
-    func countdownLabelFrame(_ seconds: TimeInterval)
+   // countDown
+    func timerRunning(_ seconds: TimeInterval)
     {
-        //카운드 다운 셋팅
-        let countDownlabel = CountdownLabel(frame: CGRect(x: 0, y: btnStackView.frame.maxY, width: view.frame.width, height: startBtn.frame.minY - btnStackView.frame.maxY), minutes: seconds)
-        countDownlabel.textAlignment = .center
-        countDownlabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        self.view.addSubview(countDownlabel)
-        countDownlabel.countdownDelegate = self
-        countDownlabel.start()
-        
+        countDownLB.setCountDownTime(minutes: seconds)
+        countDownLB.countdownDelegate = self
+        countDownLB.start()
     }
     
     @IBAction func detailButtonAction(_ sender: UIButton) {
