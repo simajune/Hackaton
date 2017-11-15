@@ -18,18 +18,12 @@ class SettingTableViewController: UITableViewController {
     @IBAction func logOutButton(_ sender: Any)
     {
         // 알림창
-        let alert = UIAlertController(title: "로그아웃", message: "정말 로그아웃하시겠습니까?", preferredStyle: UIAlertControllerStyle.alert)
-        
-        alert.addAction(UIAlertAction(title: "아니오", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "예", style: .destructive, handler: { _ in
-            // 이곳을 누르면 동작 하는 코드
+        let alertController = Alert.showAlertController(title: "로그아웃", message: "정말 로그아웃하시겠습니까?", actionStyle: .destructive, cancelButton: true) { _ in
             try! Auth.auth().signOut()
-            // Login화면으로 돌아감
-            //self.dismiss(animated: true, completion: nil)
             self.performSegue(withIdentifier: "Login", sender: nil)
-            
-        }))
-        present(alert, animated: true, completion: nil)
+        }
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     // MARK: Life Cycle
@@ -41,12 +35,8 @@ class SettingTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         userIdLB.text = UserDefaults.standard.string(forKey: userIdForKey)
-        guard let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else { return }
-        versionLB.text = version
-    }
-    
-    @IBAction func backButtonAction(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+        versionLB.text = version ?? "읽을 수가 없습니다."
     }
 }
 

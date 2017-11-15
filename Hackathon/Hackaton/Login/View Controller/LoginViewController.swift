@@ -11,6 +11,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loadingIndicatorView: UIActivityIndicatorView!
     var ref: DatabaseReference!
     
     //MARK: - App Cycle
@@ -39,29 +40,26 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonAction(_ sender: CustomButton) {
         guard let id = emailTextField.text else { return }
         guard let pw = passwordTextField.text else { return }
+        loadingIndicatorView.startAnimating()
         
         //파이어베이스 로그인
         Auth.auth().signIn(withEmail: id, password: pw) { (user, error) in
+            self.loadingIndicatorView.stopAnimating()
             if error == nil && user != nil {
-                UserDefaults.standard.set(id, forKey: "username")
-                
-                
-                let alertSheet = UIAlertController(title: "로그인 성공", message: "로그인 성공", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "확인", style: .default, handler: { (action) in
+                let alertSheet = Alert.showAlertController(title: "로그인 성공", message: "로그인이 정상적으로\n 되었습니다.", cancelButton: false, complition: { (action) in
                     let mainstoryBoard = UIStoryboard(name: "Main", bundle: nil)
                     if let mainVC = mainstoryBoard.instantiateViewController(withIdentifier: "Main") as? UINavigationController {
                         self.present(mainVC, animated: true, completion: nil)
                     }
                 })
-                alertSheet.addAction(okAction)
                 self.present(alertSheet, animated: true, completion: nil)
+                
             }else {
                 print(error!.localizedDescription)
                 let loginErrorMsg = error!.localizedDescription
                 let errorMsg = loginError(rawValue: loginErrorMsg)?.ErrorStr
-                let alertSheet = UIAlertController(title: "경고", message: errorMsg, preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
-                alertSheet.addAction(okAction)
+                let alertSheet = Alert.showAlertController(title: "경고", message: errorMsg, cancelButton: false, complition: nil)
+
                 self.present(alertSheet, animated: true, completion: nil)
             }
         }

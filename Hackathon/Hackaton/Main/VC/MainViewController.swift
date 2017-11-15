@@ -3,6 +3,12 @@ import UIKit
 import Firebase
 import CountdownLabel
 // MARK: 메인 부분
+
+let formatter = DateFormatter()
+let userCash = "cash"
+let userTotalTime = "totalTime"
+
+
 class MainViewController: UIViewController {
     
     @IBOutlet weak var btnStackView: UIStackView!
@@ -12,17 +18,17 @@ class MainViewController: UIViewController {
     @IBOutlet weak var cashLB: UILabel!
     
     // MARK: 프로퍼티
-    var seconds  = 0
-    var tag = 0
+    
+    var seconds = 0
     var cash = 0
     var totalTime = 0
-    let userCash = "cash"
-    let userTotalTime = "TotalTime"
     let timeOnTheFirstButton = 30
     let timeOnTheSecondButton = 60
     let timeOnTheThirdButton = 90
     let timeOnTheFourthButton = 120
     var userButtonTag: Int?
+    
+    
     
     // 버튼 액션
     @IBAction func buttonAction(_ sender: UIButton) {
@@ -51,21 +57,34 @@ class MainViewController: UIViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        uid = Auth.auth().currentUser?.uid
+        ref = Database.database().reference()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UserDefaults.standard.integer(forKey: userCash)
-        UserDefaults.standard.integer(forKey: userTotalTime)
-        cashLB.text = "\(cash)"
+
+        ref.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            if let value = snapshot.value as? NSDictionary {
+                self.cash = value[userCash] as! Int
+                self.totalTime = value[userTotalTime] as! Int
+                self.cashLB.text = "\(self.cash)"
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     // MARK: 메소드
     // 분을 초로 계산하는 메소드
     func minutesToSeconds(minutes minuteValue: Int) -> Int
     {
-       return minuteValue * 60
+       return minuteValue
     }
     
     // CountdownLabel 프레임
@@ -81,24 +100,11 @@ class MainViewController: UIViewController {
         
     }
     
-    @IBAction func unwindToFirstViewController(segue: UIStoryboardSegue) {
-        
-    }
-    
     @IBAction func detailButtonAction(_ sender: UIButton) {
-//        UserDefaults.standard.set(<#T##url: URL?##URL?#>, forKey: <#T##String#>)
-//        let detailSB = UIStoryboard(name: "Detail", bundle: nil)
-//        if let detailVC = detailSB.instantiateViewController(withIdentifier: "Detail") as? UINavigationController {
-//            self.present(detailVC, animated: true, completion: nil)
-//        }
         performSegue(withIdentifier: "DetailSegue", sender: self)
     }
     
     @IBAction func settingsButtonAction(_ sender: UIButton) {
-//        let settingsSB = UIStoryboard(name: "Settings", bundle: nil)
-//        if let settingsVC = settingsSB.instantiateViewController(withIdentifier: "SettingStoryboard") as? SettingTableViewController {
-//            self.present(settingsVC, animated: true, completion: nil)
-//        }
         performSegue(withIdentifier: "SettingsSegue", sender: self)
     }
     
@@ -109,6 +115,11 @@ extension MainViewController: CountdownLabelDelegate {
     // 타이머가 끝나고 난 후
     func countdownFinished()
     {
+        //오늘 날짜 저장
+        formatter.dateFormat = "yyyyMMdd"
+        let date = Date()
+        let todayDate = formatter.string(from: date)
+        
         guard let tag = userButtonTag else { return }
         switch tag  {
         case 1:
@@ -130,6 +141,10 @@ extension MainViewController: CountdownLabelDelegate {
         cashLB.text = "\(cash)"
         UserDefaults.standard.set(cash, forKey: userCash)
         UserDefaults.standard.set(totalTime, forKey: userTotalTime)
+        
+        ref.child(uid).updateChildValues([userCash : cash])
+        ref.child(uid).updateChildValues([userTotalTime : totalTime])
+        
         
         let alert = UIAlertController(title: "CASH", message: "\(cash)", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)

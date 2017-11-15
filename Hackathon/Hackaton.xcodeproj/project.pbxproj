@@ -17,6 +17,7 @@
 		231816721FB59C7C00E69EB3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231816711FB59C7C00E69EB3 /* Login.storyboard */; };
 		231816741FB59C8500E69EB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231816731FB59C8500E69EB3 /* LoginViewController.swift */; };
 		231816761FB5B19D00E69EB3 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231816751FB5B19D00E69EB3 /* SignupViewController.swift */; };
+		231889B11FBB132D00DDE8B8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231889B01FBB132C00DDE8B8 /* Alert.swift */; };
 		2321CE8A1FB8706A009BAE3D /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321CE891FB8706A009BAE3D /* DataCenter.swift */; };
 		237E08DF1FB5D01F004551B3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E08DE1FB5D01F004551B3 /* CustomButton.swift */; };
 		237E08ED1FB6057D004551B3 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E08EA1FB6057D004551B3 /* SettingTableViewController.swift */; };
@@ -40,6 +41,7 @@
 		231816711FB59C7C00E69EB3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		231816731FB59C8500E69EB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		231816751FB5B19D00E69EB3 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		231889B01FBB132C00DDE8B8 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		2321CE891FB8706A009BAE3D /* DataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
 		237E08DE1FB5D01F004551B3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		237E08EA1FB6057D004551B3 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		237E08F51FB64416004551B3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				231889B01FBB132C00DDE8B8 /* Alert.swift */,
 				237E08F61FB64416004551B3 /* Layout */,
 				237E08F81FB64416004551B3 /* VC */,
 				237E08FA1FB64416004551B3 /* View */,
@@ -383,6 +386,7 @@
 				231816741FB59C8500E69EB3 /* LoginViewController.swift in Sources */,
 				231816631FB595E000E69EB3 /* SplashViewController.swift in Sources */,
 				237E08FE1FB64416004551B3 /* MainViewController.swift in Sources */,
+				231889B11FBB132D00DDE8B8 /* Alert.swift in Sources */,
 				231816501FB585F500E69EB3 /* AppDelegate.swift in Sources */,
 				237E08DF1FB5D01F004551B3 /* CustomButton.swift in Sources */,
 			);

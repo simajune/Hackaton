@@ -260,14 +260,14 @@
                                     <constraint firstAttribute="width" constant="30" id="Wjf-hI-CVr"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="캐쉬" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uk-30-qCV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uk-30-qCV">
                                 <rect key="frame" x="296.5" y="80" width="78.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="토탈 시간" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HA7-yb-5ak">
-                                <rect key="frame" x="0.0" y="624" width="375" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HA7-yb-5ak">
+                                <rect key="frame" x="0.0" y="617.5" width="375" height="33.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -278,6 +278,7 @@
                             <constraint firstItem="HA7-yb-5ak" firstAttribute="centerY" secondItem="zbD-ec-N4o" secondAttribute="centerY" multiplier="1.9" id="109-TC-HOH"/>
                             <constraint firstItem="fcs-B0-UXL" firstAttribute="centerX" secondItem="zbD-ec-N4o" secondAttribute="centerX" multiplier="1.5" id="20L-ZX-ajI"/>
                             <constraint firstItem="yPa-4A-h4R" firstAttribute="height" secondItem="zbD-ec-N4o" secondAttribute="height" multiplier="0.05" id="27Y-Wj-kpj"/>
+                            <constraint firstItem="HA7-yb-5ak" firstAttribute="height" secondItem="zbD-ec-N4o" secondAttribute="height" multiplier="0.05" id="4dt-pT-vua"/>
                             <constraint firstItem="Cvn-V7-LT2" firstAttribute="centerY" secondItem="zbD-ec-N4o" secondAttribute="centerY" multiplier="0.45" id="7sU-Gt-k5S"/>
                             <constraint firstItem="4W0-kk-eoR" firstAttribute="centerX" secondItem="zbD-ec-N4o" secondAttribute="centerX" id="9tw-S6-NCI"/>
                             <constraint firstItem="B1c-iw-17s" firstAttribute="height" secondItem="zbD-ec-N4o" secondAttribute="height" multiplier="0.3" id="B5N-jI-Snn"/>
@@ -336,9 +337,6 @@
                                         <action selector="homeButtonAction:" destination="qEk-Dr-97w" eventType="touchUpInside" id="wec-7d-TQQ"/>
                                     </connections>
                                 </button>
-                                <connections>
-                                    <segue destination="aDW-rJ-eEY" kind="unwind" unwindAction="unwindToFirstViewControllerWithSegue:" id="NbT-Qx-tGd"/>
-                                </connections>
                             </barButtonItem>
                             <barButtonItem style="plain" id="3Hi-VN-DLV">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gwM-kL-Wva">
@@ -379,7 +377,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmj-Qi-kDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="aDW-rJ-eEY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-167" y="87"/>
         </scene>
@@ -394,7 +391,6 @@
         <!--Navigation Controller-->
         <scene sceneID="rpN-So-OM3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DIg-2k-mcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="Detail" automaticallyAdjustsScrollViewInsets="NO" id="0qU-yv-29A" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YlC-wF-fad">
@@ -406,6 +402,7 @@
                         <segue destination="qEk-Dr-97w" kind="relationship" relationship="rootViewController" id="Iz2-hJ-rKz"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DIg-2k-mcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1028" y="87"/>
         </scene>

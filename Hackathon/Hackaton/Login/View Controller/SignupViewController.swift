@@ -11,6 +11,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var rePasswordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var loadingIndicatorView: UIActivityIndicatorView!
     
     var ref: DatabaseReference!
     
@@ -42,37 +43,37 @@ class SignupViewController: UIViewController {
         guard let password = passwordTextField.text else { return }
         guard let repassword = rePasswordTextField.text else { return }
         guard let email = emailTextField.text else { return }
-        
+        loadingIndicatorView.startAnimating()
         if password != repassword {
             wrongSignup()
             
         }else {
             //비밀번호가 일치할 때
             Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+                self.loadingIndicatorView.stopAnimating()
                 //에러가 없고 유저 내용이 있는 경우
                 if error == nil && user != nil {
-                    print("User Created")
-                    UserDefaults.standard.set(email, forKey: "username")
-                    
                     let userDic: [String: Any] = ["user": email, "cash": 0, "totalTime": 0]
                     self.ref.child(user!.uid).setValue(userDic)
-                    
-                    let alertSheet = UIAlertController(title: "가입 완료", message: "가입이 성공적으로\n이루어졌습니다", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "확인", style: .default, handler: { (action) in
+                    let alertSheet = Alert.showAlertController(title: "가입 완료",
+                                                               message: "가입이 성공적으로\n이루어졌습니다.",
+                                                               cancelButton: false,
+                                                               complition: { (action) in
                         let mainstoryBoard = UIStoryboard(name: "Main", bundle: nil)
                         if let mainVC = mainstoryBoard.instantiateViewController(withIdentifier: "Main") as? UINavigationController {
                             self.present(mainVC, animated: true, completion: nil)
                         }
                     })
-                    alertSheet.addAction(okAction)
                     self.present(alertSheet, animated: true, completion: nil)
                 //파이어 베이스상 가입시 에러가 발생했을 때
                 }else {
                     let firebaseErrorMsg = error!.localizedDescription
                     let errorMsg = firebaseError(rawValue: firebaseErrorMsg)?.ErrorStr
-                    let alertSheet = UIAlertController(title: "경고", message: errorMsg, preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
-                    alertSheet.addAction(okAction)
+                    
+                    let alertSheet = Alert.showAlertController(title: "경고",
+                                                               message: errorMsg,
+                                                               cancelButton: false,
+                                                               complition: nil)
                     self.present(alertSheet, animated: true, completion: nil)
                 }
             })
@@ -84,6 +85,8 @@ class SignupViewController: UIViewController {
         let OkAction = UIAlertAction(title: "확인", style: .default, handler: nil)
         alertSheet.addAction(OkAction)
         present(alertSheet, animated: true, completion: nil)
+        
+        
     }
 }
     
@@ -105,3 +108,4 @@ enum firebaseError : String{
         }
     }
 }
+

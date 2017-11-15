@@ -6,6 +6,9 @@
 import UIKit
 import Firebase
 
+var uid: String!
+var ref: DatabaseReference!
+
 class DetailViewController: UIViewController {
     
     //MARK: - Property
@@ -27,10 +30,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var friTree: UIImageView!
     @IBOutlet weak var satTree: UIImageView!
     
+    let formater = DateFormatter()
     var totalMinutes: Int = 0
     var totalCash: Int = 0
-    var uid: String!
-    var ref: DatabaseReference!
+    
     
     //MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -38,10 +41,20 @@ class DetailViewController: UIViewController {
         initialTreeView()
         uid = Auth.auth().currentUser?.uid
         ref = Database.database().reference()
-        
+        //데이터 값 불러오기
+        //캐쉬 값 불러오기
+        ref.child(uid).observeSingleEvent(of: .value) { (snapshot) in
+            if let value = snapshot.value as? NSDictionary{
+                self.totalCash = value[userCash] as! Int
+                self.totalMinutes = value[userTotalTime] as! Int
+                self.totalTime.text = "금주 총 집중한 시간 : \(self.totalMinutes) 분"
+                self.cashLb.text = "\(self.totalCash)"
+            }
+        }
     }
+    
     //MARK: - 나무 알파 값 초기화
-    func initialTreeView() {
+    private func initialTreeView() {
         self.sunTree.alpha = 0
         self.monTree.alpha = 0
         self.tueTree.alpha = 0
@@ -54,20 +67,6 @@ class DetailViewController: UIViewController {
     //MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        //데이터 값 불러오기
-        //캐쉬 값 불러오기
-//        totalCash = UserDefaults.standard.integer(forKey: "cash")
-        ref.child(uid).observeSingleEvent(of: .value) { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            self.totalCash = value?["cash"] as? Int ?? 0
-            self.totalMinutes = value?["totalTime"] as? Int ?? 0
-        }
-        //총 시간 불러오기
-//        totalMinutes = UserDefaults.standard.integer(forKey: "totalTime")
-        
-        totalTime.text = "금주 총 집중한 시간 : " + String(totalMinutes) + "분"
-        cashLb.text = String(totalCash)
     }
     
     //MARK: - ViewDidAppear
@@ -103,7 +102,7 @@ class DetailViewController: UIViewController {
 extension NSLayoutConstraint {
     func changeMultiplier(changeMultiplier: CGFloat) -> NSLayoutConstraint {
         NSLayoutConstraint.deactivate([self])
-        let newConstaint = NSLayoutConstraint(item: self.firstItem,
+        let newConstaint = NSLayoutConstraint(item: self.firstItem!,
                                               attribute: self.firstAttribute,
                                               relatedBy: self.relation,
                                               toItem: self.secondItem,
@@ -117,5 +116,14 @@ extension NSLayoutConstraint {
         NSLayoutConstraint.activate([newConstaint])
         
         return newConstaint
+    }
+}
+
+//MARK: - 테스트후 사용
+extension UIButton {
+    func setButtonLayer(cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: CGColor) {
+        self.layer.cornerRadius = cornerRadius
+        self.layer.borderWidth = borderWidth
+        self.layer.borderColor = borderColor
     }
 }

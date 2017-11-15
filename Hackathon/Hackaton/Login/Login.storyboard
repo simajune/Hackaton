@@ -76,11 +76,16 @@
                                                     <segue destination="XHy-UR-0Zj" kind="show" id="4gO-Rx-LTK"/>
                                                 </connections>
                                             </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8Wl-gS-LBI">
+                                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="hG7-xx-jg4" secondAttribute="trailing" id="AeY-JA-a4v"/>
                                             <constraint firstItem="kdM-y4-YWo" firstAttribute="width" secondItem="r7g-Un-6A6" secondAttribute="width" multiplier="0.4" id="AgM-zs-yS7"/>
+                                            <constraint firstItem="8Wl-gS-LBI" firstAttribute="centerY" secondItem="r7g-Un-6A6" secondAttribute="centerY" id="ERe-2B-q8t"/>
                                             <constraint firstItem="kdM-y4-YWo" firstAttribute="height" secondItem="r7g-Un-6A6" secondAttribute="height" multiplier="0.2" id="GxE-j2-LsP"/>
                                             <constraint firstItem="35G-8W-Gpq" firstAttribute="width" secondItem="r7g-Un-6A6" secondAttribute="width" multiplier="0.7" id="IWT-oW-Mg8"/>
                                             <constraint firstItem="kdM-y4-YWo" firstAttribute="centerX" secondItem="r7g-Un-6A6" secondAttribute="centerX" id="J3I-yj-NvG"/>
@@ -90,6 +95,7 @@
                                             <constraint firstItem="Ubp-hT-eSW" firstAttribute="centerX" secondItem="r7g-Un-6A6" secondAttribute="centerX" id="bC8-GI-kHq"/>
                                             <constraint firstItem="kmj-yn-1wX" firstAttribute="centerY" secondItem="r7g-Un-6A6" secondAttribute="centerY" multiplier="1.3" id="bM7-bV-oZI"/>
                                             <constraint firstItem="Ubp-hT-eSW" firstAttribute="width" secondItem="kmj-yn-1wX" secondAttribute="width" id="dXv-Z2-Aa8"/>
+                                            <constraint firstItem="8Wl-gS-LBI" firstAttribute="centerX" secondItem="r7g-Un-6A6" secondAttribute="centerX" id="fEH-gN-cqP"/>
                                             <constraint firstItem="35G-8W-Gpq" firstAttribute="centerX" secondItem="r7g-Un-6A6" secondAttribute="centerX" id="kTV-sc-Jui"/>
                                             <constraint firstAttribute="bottom" secondItem="hG7-xx-jg4" secondAttribute="bottom" id="kib-gY-Z19"/>
                                             <constraint firstItem="GLZ-Gm-4cT" firstAttribute="centerX" secondItem="r7g-Un-6A6" secondAttribute="centerX" id="klm-xc-03j"/>
@@ -123,6 +129,7 @@
                     <navigationItem key="navigationItem" id="MbZ-9k-ys1"/>
                     <connections>
                         <outlet property="emailTextField" destination="35G-8W-Gpq" id="vcK-SD-u6G"/>
+                        <outlet property="loadingIndicatorView" destination="8Wl-gS-LBI" id="b8q-mI-ilp"/>
                         <outlet property="passwordTextField" destination="kmj-yn-1wX" id="iDt-As-eXN"/>
                         <outlet property="scrollView" destination="3vD-2d-Nka" id="46v-ih-IZ9"/>
                         <segue destination="2Ie-0b-f6c" kind="show" id="xlY-T0-LqU"/>
@@ -209,12 +216,17 @@
                                                     <action selector="dismissButtonAction:" destination="XHy-UR-0Zj" eventType="touchUpInside" id="reU-8t-CVz"/>
                                                 </connections>
                                             </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="2qY-bs-OIf">
+                                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                                <color key="color" red="0.30196078430000001" green="0.24313725489999999" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="o7M-LU-Vu0" firstAttribute="centerX" secondItem="IJW-eM-kzD" secondAttribute="centerX" id="1Zj-5K-RTO"/>
                                             <constraint firstItem="fYV-JY-9Rv" firstAttribute="width" secondItem="o7M-LU-Vu0" secondAttribute="width" id="7Gz-6S-Sqd"/>
                                             <constraint firstItem="h6N-7m-gVi" firstAttribute="centerX" secondItem="IJW-eM-kzD" secondAttribute="centerX" id="8xl-4q-1Ck"/>
+                                            <constraint firstItem="2qY-bs-OIf" firstAttribute="centerX" secondItem="IJW-eM-kzD" secondAttribute="centerX" id="Eyw-SP-OcB"/>
                                             <constraint firstItem="fYV-JY-9Rv" firstAttribute="centerY" secondItem="IJW-eM-kzD" secondAttribute="centerY" multiplier="1.5" id="GlQ-dO-9nM"/>
                                             <constraint firstItem="T7C-Ph-Is4" firstAttribute="centerY" secondItem="IJW-eM-kzD" secondAttribute="centerY" multiplier="1.25" id="ILU-Dk-9Ka"/>
                                             <constraint firstItem="Rao-GY-Kai" firstAttribute="centerX" secondItem="IJW-eM-kzD" secondAttribute="centerX" id="IqV-yR-5Yb"/>
@@ -229,6 +241,7 @@
                                             <constraint firstItem="Rao-GY-Kai" firstAttribute="centerY" secondItem="IJW-eM-kzD" secondAttribute="centerY" multiplier="0.45" id="jo9-Zb-dd9"/>
                                             <constraint firstItem="h6N-7m-gVi" firstAttribute="width" secondItem="o7M-LU-Vu0" secondAttribute="width" id="nGu-wV-aZb"/>
                                             <constraint firstItem="T7C-Ph-Is4" firstAttribute="width" secondItem="o7M-LU-Vu0" secondAttribute="width" id="p3i-OQ-VMO"/>
+                                            <constraint firstItem="2qY-bs-OIf" firstAttribute="centerY" secondItem="IJW-eM-kzD" secondAttribute="centerY" id="pDX-TI-Lio"/>
                                             <constraint firstItem="o7M-LU-Vu0" firstAttribute="centerY" secondItem="IJW-eM-kzD" secondAttribute="centerY" id="uRz-LY-h9t"/>
                                             <constraint firstItem="h6N-7m-gVi" firstAttribute="centerY" secondItem="IJW-eM-kzD" secondAttribute="centerY" multiplier="1.75" id="vZt-eH-SyR"/>
                                             <constraint firstItem="e4b-4z-ULz" firstAttribute="leading" secondItem="IJW-eM-kzD" secondAttribute="leading" id="yvJ-tJ-dBH"/>
@@ -258,6 +271,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="o7M-LU-Vu0" id="t6X-6D-Xis"/>
+                        <outlet property="loadingIndicatorView" destination="2qY-bs-OIf" id="dyN-eJ-gId"/>
                         <outlet property="passwordTextField" destination="T7C-Ph-Is4" id="x9d-dB-NBx"/>
                         <outlet property="rePasswordTextField" destination="fYV-JY-9Rv" id="ZaH-en-3kx"/>
                         <outlet property="scrollView" destination="cfP-Bf-d59" id="X0c-30-3hC"/>

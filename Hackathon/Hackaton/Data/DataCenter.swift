@@ -20,4 +20,11 @@ struct UserData {
     var username: String?
     var cash: Int?
     var totalTime: Int?
+    var dayTime: [DateTime]
+    
+    
+}
+
+struct DateTime {
+    var time: Int
 }
