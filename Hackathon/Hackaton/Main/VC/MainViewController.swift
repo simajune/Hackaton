@@ -12,9 +12,7 @@ let userTotalTime = "totalTime"
 class MainViewController: UIViewController {
     
     @IBOutlet weak var btnStackView: UIStackView!
-    
     @IBOutlet weak var startBtn: UIButton!
-    
     @IBOutlet weak var cashLB: UILabel!
     @IBOutlet weak var countDownLB: CountdownLabel!
     
