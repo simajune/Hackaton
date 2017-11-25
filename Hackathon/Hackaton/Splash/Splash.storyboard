@@ -43,11 +43,21 @@
                     <connections>
                         <outlet property="BG" destination="ggH-60-Y5C" id="53f-s6-x41"/>
                         <outlet property="logoImage" destination="pUl-DB-xDf" id="ubL-ie-naT"/>
+                        <segue destination="ivc-zb-3Ou" kind="show" identifier="segueSplashToLogin" id="Xtf-UF-JkC"/>
+                        <segue destination="cke-lc-OvI" kind="show" identifier="segueSplashToMain" id="Ihz-Tt-e7b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T7d-8T-TEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-478" y="-353"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="aHV-nk-x7E">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="LoginStoryboard" storyboardName="Login" id="ivc-zb-3Ou" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3cs-TY-eRS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="-655"/>
         </scene>
         <!--Main-->
         <scene sceneID="eKm-fq-l7n">
@@ -55,7 +65,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="Main" storyboardName="Main" id="cke-lc-OvI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQ7-2d-Ryq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="203" y="-323"/>
+            <point key="canvasLocation" x="160" y="-192"/>
         </scene>
         <!--Login-->
         <scene sceneID="gNb-a0-UpW">

@@ -12,5 +12,6 @@ pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'CountdownLabel'
 pod 'RevealingSplashView'
+pod 'SwiftKeychainWrapper'
 
 end

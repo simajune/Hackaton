@@ -20,7 +20,7 @@
         <!--Login View Controller-->
         <scene sceneID="rUL-Vq-uEc">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="4Cz-hi-SYH" customClass="LoginViewController" customModule="Hackaton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginStoryboard" automaticallyAdjustsScrollViewInsets="NO" id="4Cz-hi-SYH" customClass="LoginViewController" customModule="Hackaton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j9z-tn-wZo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="XHy-UR-0Zj" kind="show" id="4gO-Rx-LTK"/>
+                                                    <segue destination="XHy-UR-0Zj" kind="show" identifier="segueLoginToSignUp" id="4gO-Rx-LTK"/>
                                                 </connections>
                                             </button>
                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8Wl-gS-LBI">
@@ -132,7 +132,7 @@
                         <outlet property="loadingIndicatorView" destination="8Wl-gS-LBI" id="b8q-mI-ilp"/>
                         <outlet property="passwordTextField" destination="kmj-yn-1wX" id="iDt-As-eXN"/>
                         <outlet property="scrollView" destination="3vD-2d-Nka" id="46v-ih-IZ9"/>
-                        <segue destination="2Ie-0b-f6c" kind="show" id="xlY-T0-LqU"/>
+                        <segue destination="2Ie-0b-f6c" kind="show" identifier="segueLoginToMain" id="xlY-T0-LqU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8XG-BR-RLB" userLabel="First Responder" sceneMemberID="firstResponder"/>
