@@ -135,17 +135,12 @@ extension MainViewController: CountdownLabelDelegate {
         }
         
         cashLB.text = "\(cash)"
-        UserDefaults.standard.set(cash, forKey: userCash)
-        UserDefaults.standard.set(totalTime, forKey: userTotalTime)
         
         ref.child(uid).updateChildValues([userCash : cash])
         ref.child(uid).updateChildValues([userTotalTime : totalTime])
         
-        
-        let alert = UIAlertController(title: "CASH", message: "\(cash)", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
-        alert.addAction(okAction)
-        present(alert, animated: false, completion: nil)
+        let alertController = Alert.showAlertController(title: "CASH", message: "\(cash)", actionStyle: UIAlertActionStyle.default, cancelButton: false, complition: nil)
+        present(alertController, animated: true, completion: nil)
         startBtn.isHidden = false // 메소드가 끝나면 버튼 보이기
     }
 }

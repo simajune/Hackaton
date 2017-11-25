@@ -16,6 +16,7 @@ class SignupViewController: UIViewController {
     var ref: DatabaseReference!
     
     override func viewDidLoad() {
+
         super.viewDidLoad()
         ref = Database.database().reference()
         //키보드에 대한 Notification
@@ -85,8 +86,6 @@ class SignupViewController: UIViewController {
         let OkAction = UIAlertAction(title: "확인", style: .default, handler: nil)
         alertSheet.addAction(OkAction)
         present(alertSheet, animated: true, completion: nil)
-        
-        
     }
 }
     
